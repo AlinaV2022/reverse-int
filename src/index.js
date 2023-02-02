@@ -1,5 +1,10 @@
 module.exports = function reverse (n) {
-    let arr = String(n).split('');
-    if (arr[0] === '-') arr.shift()
-    return Number(arr.reverse().join(''));
+    let string = String(n);
+    let result = ''
+    for (let i = string.length - 1; i >= 0; i--) {
+        if (string[i] != '-') {
+            result += string[i];
+        } 
+    }
+    return Number(result);
 }
